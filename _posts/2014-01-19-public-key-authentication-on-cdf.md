@@ -43,7 +43,7 @@ The key's randomart image is:
 
 #### Copy your public key onto CDF.
 
-Your public key is by defailt stored in the file `~/.ssh/id_rsa.pub`. We need to copy the contents of this file into a file on CDF, `~/.ssh/authorized_keys` so that CDF knows that your key pair is allowed to log into your CDF account.
+Your public key is by default stored in the file `~/.ssh/id_rsa.pub`. We need to copy the contents of this file into a file on CDF, `~/.ssh/authorized_keys` so that CDF knows that your key pair is allowed to log into your CDF account.
 
 ```bash
 cat ~/.ssh/id_rsa.pub | ssh g3spence@cdf.toronto.edu "cat >> ~/.ssh/authorized_keys"
