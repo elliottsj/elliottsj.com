@@ -7,12 +7,9 @@ twitter_username: spe_
 github_username:  elliottsj
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 permalink: pretty
 
-# kramdown settings
-kramdown:
-  input: GFM
-  use_coderay: true
-  coderay:
-    coderay_line_numbers: nil
+# redcarpet settings
+redcarpet:
+  extensions: []
