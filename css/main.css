@@ -1,3 +1,9 @@
+/* Prevent images from exceeding the width of their container */
 img {
   max-width: 100%
+}
+
+/* Prevent line breaks in <code></code> elements */
+.post code {
+	white-space: pre;
 }
