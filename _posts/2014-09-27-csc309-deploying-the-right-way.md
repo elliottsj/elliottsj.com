@@ -134,6 +134,7 @@ fi
 echo "Done copying!"
 
 # Remove the temporary repo
+cd ~
 rm -rf $TMP_GIT_CLONE
 ```
 
