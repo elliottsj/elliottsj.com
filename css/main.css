@@ -7,3 +7,8 @@ img {
 .post code {
 	white-space: pre;
 }
+
+/* Prevent long horizontal text from widening the viewport */
+.post p {
+  overflow-x: scroll;
+}
