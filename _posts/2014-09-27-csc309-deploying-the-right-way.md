@@ -2,6 +2,7 @@
 layout: post
 title:  'CSC309: Deploying the Right Way'
 date:   2014-09-27 12:00:00
+comments: true
 ---
 
 The first assignment in [CSC309][csc309] this semester has some rather strange methods for deploying the website:

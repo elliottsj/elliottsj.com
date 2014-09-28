@@ -2,6 +2,7 @@
 layout: post
 title:  Public Key Authentication on CDF
 date:   2014-01-19 12:00:00
+comments: true
 ---
 
 All the time, I see people entering their [CDF](http://www.cdf.toronto.edu/) password every time they connect via SSH. Instead of password authentication, you can use an SSH key pair to authenticate automatically.
