@@ -13,7 +13,7 @@ All the time, I see people entering their [CDF](http://www.cdf.toronto.edu/) pas
 Use `ssh-keygen` to generate your SSH private/public key pair:
 
 ```bash
-$ ssh-keygen -t rsa -C "g3spence"
+ssh-keygen -t rsa -C "g3spence"
 ```
 
 The output will look something like this:
@@ -84,14 +84,14 @@ Create `~/.ssh/authorized_keys` by pasting your public key into an
 `echo "..." >> authorized_keys` command:
 
 ```bash
-redwolf:~$ cd .ssh/
-redwolf:~/.ssh$ echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCiaF1qSlz3YI7bZueQG8lB8D7QukZfBhyncowtSrGwINInz4RFg9V2wbbnqxfs6SBBXAOQ5Nor/98gHWULhSKrE1bJ1f7/yivl5b7U36QJ/zG9mozWf5G8t0OFVyEW4uGbeJYcm5GSC9yyViIvCUPG1gY1mXHcFsCscQfBpkC5BxyuAX1mi39rscP3QFHt8j7Ybv7k481tzUSAaB3X/cRR7tNLEay9+4RTgm7X85aiWnmAuhEvjRB5+DrBm/JMqhR0qF6pJr+snHbEkliuxZc2KsqCJqxvO8NW7wiTPRKKlAWnoMFA+qIU318nntR6GDlaVKc/v15cr3HEBRvdiUtR g3spence" >> authorized_keys
+cd .ssh/
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCiaF1qSlz3YI7bZueQG8lB8D7QukZfBhyncowtSrGwINInz4RFg9V2wbbnqxfs6SBBXAOQ5Nor/98gHWULhSKrE1bJ1f7/yivl5b7U36QJ/zG9mozWf5G8t0OFVyEW4uGbeJYcm5GSC9yyViIvCUPG1gY1mXHcFsCscQfBpkC5BxyuAX1mi39rscP3QFHt8j7Ybv7k481tzUSAaB3X/cRR7tNLEay9+4RTgm7X85aiWnmAuhEvjRB5+DrBm/JMqhR0qF6pJr+snHbEkliuxZc2KsqCJqxvO8NW7wiTPRKKlAWnoMFA+qIU318nntR6GDlaVKc/v15cr3HEBRvdiUtR g3spence" >> authorized_keys
 ```
 
 Finally, log out:
 
 ```bash
-redwolf:~/.ssh$ exit
+exit
 ```
 
 #### Add a saved session to PuTTY that uses your CDF username and private key to log in automatically.
