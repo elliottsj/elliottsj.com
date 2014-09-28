@@ -115,7 +115,11 @@ Now that we can push code to the server, the final step is to create a
 [Git hook](http://git-scm.com/book/en/Customizing-Git-Git-Hooks) that will deploy your site
 whenever you do a `git push`.
 
-On your EC2 instance, create the file `~/csc309-a1.git/hooks/post-receive`:
+On your EC2 instance, create the *post-receive* script:
+
+```
+ubuntu@ip-1-2-3-4:~$ nano ~/csc309-a1.git/hooks/post-receive
+```
 
 ```bash
 #!/bin/bash -l
