@@ -40,8 +40,13 @@ Next, launch a new EC2 instance of the AMI that De Lara provides:
     Just ignore that; all this means is that port 22 (ssh) is open to the entire internet.
     
 After a minute or so, your instance will be running and you can connect via SSH.
-The AWS console will tell you to use a command like `ssh -i your-private-key.pem ubuntu@<PUBLIC_IP>`,
-but you should set your default SSH key:
+The AWS console will tell you to use a command like... 
+
+```bash
+ssh -i your-private-key.pem ubuntu@<PUBLIC_IP>
+```
+
+...but you should set your default SSH key:
 
 ```bash
 # SSH will automatically use the key ~/.ssh/id_rsa
