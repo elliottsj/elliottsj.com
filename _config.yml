@@ -13,3 +13,8 @@ permalink: pretty
 # redcarpet settings
 redcarpet:
   extensions: [footnotes]
+
+# Sass
+sass:
+  sass_dir: css
+  style: :compressed
