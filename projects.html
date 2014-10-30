@@ -15,11 +15,11 @@ permalink: /projects/
     {% endif %}
     
     {% if project.github %}
-      <a class="github" href="{{ project.github }}"></a>
+      [<a class="github" href="{{ project.github }}">GitHub</a>]
     {% endif %}
-    {% if project.startDate %}
-      <span class="date-range">{{ project.startDate | date: "%b %-d, %Y" }}</span>
-    {% endif %}
+    <!--{% if project.startDate %}-->
+      <!--<span class="date-range">{{ project.startDate | date: "%b %-d, %Y" }}</span>-->
+    <!--{% endif %}-->
     {% if project.description %}
       <p>{{ project.description }}</p>
     {% endif %}
