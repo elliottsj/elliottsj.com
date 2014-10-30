@@ -1,0 +1,76 @@
+# Projects
+---
+
+- name: Sherlocke
+  description: >
+    An intelligent research tool for law that surfaces information relevant
+    to your current task.
+  url: https://sherlocke.me
+  github: https://github.com/sherlocke
+  startDate: 2014-09
+
+- name: Faster Than Walking
+  description: >
+    An Android + Pebble app that shows you when the next TTC bus or streetcar
+    will arrive.
+  url: https://play.google.com/store/apps/details?id=com.elliottsj.ftw
+  github: https://github.com/elliottsj/ftw
+  startDate: 2013-11
+
+- name: Mixtape
+  description: >
+    A real-time collaborative music playlist for the web: a group of people
+    at a party/event can add songs to a music queue and vote for the next one
+    to be played. Made at Hack the North 2014.
+  url: http://mixtape.unhaltable.com
+  github: https://github.com/unhaltable/mixtape
+  startDate: 2014-09
+  endDate: 2014-09
+
+- name: Exemplary
+  description: >
+    A platform for students to upload past tests and assignments,
+    extract problems, and collaborate on solutions. Made at PennApps X.
+  url: http://exemplary.io
+  github: https://github.com/unhaltable/exemplary
+  startDate: 2014-09
+  endDate: 2014-09
+
+- name: txti
+  description: >
+    An extensible SMS service that allows you to send and receive a variety
+    of questions/responses. Made at BattleHack Toronto 2014.
+  url: http://txti.unhaltable.com
+  github: https://github.com/unhaltable/txti
+  startDate: 2014-06
+  endDate: 2014-06
+
+- name: Ultraviolet
+  description: >
+    An extensible SMS service that allows you to send and receive a variety
+    of questions/responses. Made at BattleHack Toronto 2014.
+  url: http://ultraviolet.unhaltable.com
+  github: https://github.com/unhaltable/ultraviolet
+  startDate: 2014-02
+  endDate: 2014-02
+
+- name: Cryptr
+  description: >
+    A Google Chrome extension that allows users to encrypt text or files with
+    a passcode for the user to send securely to others.
+    Overall winner of the Fall 2013 UofTHacks hackathon.
+  url: http://cryptr.unhaltable.com
+  github: https://github.com/unhaltable/cryptr
+  startDate: 2013-09
+  endDate: 2013-09
+
+- name: G+ Hangouts Unlimited
+  description: >
+    A surprisingly popular user script for the browser
+    that simply auto-clicks the \"Are you still there\" prompt
+    that appears every 90 minutes in Google Hangouts.
+  url: http://userscripts-mirror.org/scripts/review/131680.html
+  github: https://github.com/elliottsj/all-nighter
+  startDate: 2012-04
+  endDate: 2014-01
+

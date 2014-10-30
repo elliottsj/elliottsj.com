@@ -1,0 +1,27 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+---
+
+<div class="projects">
+  {% for project in site.data.projects %}
+    {% if project.url %}
+      <a href="{{ project.url }}">
+        <h3>{{ project.name }}</h3>
+      </a>
+    {% else %}
+      <h3>{{ project.name }}</h3>
+    {% endif %}
+    
+    {% if project.github %}
+      <a class="github" href="{{ project.github }}"></a>
+    {% endif %}
+    {% if project.startDate %}
+      <span class="date-range">{{ project.startDate | date: "%b %-d, %Y" }}</span>
+    {% endif %}
+    {% if project.description %}
+      <p>{{ project.description }}</p>
+    {% endif %}
+  {% endfor %}
+</div>
