@@ -13,5 +13,9 @@ img {
 
 /* Prevent long horizontal text from widening the viewport */
 .post p {
-  overflow-x: scroll;
+  overflow-x: auto;
+}
+
+.post pre {
+  overflow: auto;
 }
