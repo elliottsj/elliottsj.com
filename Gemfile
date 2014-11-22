@@ -8,6 +8,3 @@ gem 'jekyll', require: false
 
 # Rake tasks
 gem 'rake'
-
-# Rouge syntax highlighter
-gem 'rouge', '~> 1.6.2'

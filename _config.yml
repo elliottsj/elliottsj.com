@@ -8,7 +8,6 @@ github_username:  elliottsj
 
 # Build settings
 markdown: redcarpet
-highlighter: rouge
 permalink: pretty
 
 # redcarpet settings
