@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Deploying a CodeIgniter App on Dokku
+title:  Deploying CodeIgniter on EC2 via Dokku
 date:   2014-11-21 12:00:00
 comments: true
 ---
