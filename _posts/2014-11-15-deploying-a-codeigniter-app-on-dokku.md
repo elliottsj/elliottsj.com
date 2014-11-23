@@ -42,7 +42,7 @@ To deploy a CodeIgniter app to dokku-alt, you'll need to
 [set it up like a Heroku app](https://devcenter.heroku.com/articles/getting-started-with-php) by configuring
 [Composer][composer] and a `Procfile`.
 
-Add `composer.json`:
+Add a file `composer.json` with the following contents:
 
 ```json
 {
@@ -55,7 +55,7 @@ Add `composer.json`:
 }
 ```
 
-Add `Procfile`:
+Add a file `Procfile` with the following contents:
 
 ```
 web: vendor/bin/heroku-php-apache2
