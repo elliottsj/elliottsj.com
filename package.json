@@ -1,0 +1,19 @@
+{
+  "name": "elliottsj.github.io",
+  "version": "1.0.0",
+  "description": "My personal portfolio site and blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elliottsj/elliottsj.github.io.git"
+  },
+  "author": "Spencer Elliott <me@elliottsj.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elliottsj/elliottsj.github.io/issues"
+  },
+  "homepage": "https://github.com/elliottsj/elliottsj.github.io#readme"
+}
