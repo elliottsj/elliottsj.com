@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/elliottsj/elliottsj.github.io/issues"
   },
-  "homepage": "https://github.com/elliottsj/elliottsj.github.io#readme"
+  "homepage": "https://github.com/elliottsj/elliottsj.github.io#readme",
+  "dependencies": {
+    "metalsmith": "^1.7.0"
+  }
 }
