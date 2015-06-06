@@ -18,5 +18,7 @@
   "homepage": "https://github.com/elliottsj/elliottsj.github.io#readme",
   "dependencies": {
     "metalsmith": "^1.7.0"
+    "babel-eslint": "^3.1.13",
+    "eslint": "^0.22.1",
   }
 }
