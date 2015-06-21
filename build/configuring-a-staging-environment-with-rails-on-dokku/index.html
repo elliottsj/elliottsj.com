@@ -1,0 +1,45 @@
+<p><a href="https://github.com/progrium/dokku">Dokku</a> is a neat little platform-as-a-service app that mimics the core functionality of <a href="https://www.heroku.com/">Heroku</a>. As with Heroku, it adopts the so-called <a href="http://12factor.net/">Twelve Factor</a> paradigm of building web applications. One of the strengths of this kind of app is that it&#39;s very portable: it&#39;s easy to deploy the app in multiple places, with multiple configurations. I&#39;ll show you how to set up your Dokku-hosted Rails app with a &#39;staging&#39; environment alongside the production environment; this is often useful to test your app before releasing it to your users.</p>
+<p>You may be tempted to create a <code>config.environments/staging.rb</code>, <a href="http://stackoverflow.com/questions/19344267/adding-a-staging-environment-to-the-workflow">as shown here</a>, but <a href="https://devcenter.heroku.com/articles/deploying-to-a-custom-rails-environment">Heroku advises against that</a> since it violates the <a href="http://12factor.net/config">third factor</a>: <em>Store your config in the environment</em>. The goal here is to make your staging environment as similar to your production environment as possible; once your start putting stuff like <code>if Rails.env.staging?</code> in your code, you start to have code that does something different if you&#39;re in a staging environment, losing the benefit of having a staging environment in the first place.</p>
+<p>If you haven&#39;t already, you should <a href="https://www.digitalocean.com/community/tutorials/how-to-use-the-dokku-one-click-digitalocean-image-to-run-a-ruby-on-rails-app">create a Rails app and deploy it to DigitalOcean using Dokku</a>.</p>
+<h4 id="add-a-git-remote">Add a git remote</h4>
+<p>Creating a staging environment is as easy as adding a secondary remote in git that will deploy a <em>staging</em> app to Dokku whenever you do a <code>git push</code>:</p>
+<pre><code class="lang-bash">git remote add staging dokku@example.com:staging
+</code></pre>
+<p>The below command would deploy your <em>master</em> branch to <a href="http://staging.example.com">http://staging.example.com</a>:</p>
+<pre><code class="lang-bash">git push staging master
+</code></pre>
+<p>A better development process might be to have a <em>develop</em> branch separate from your <em>master</em> branch. In that case, use the following command to deploy your <em>develop</em> branch to staging:</p>
+<pre><code class="lang-bash">git push staging develop:master
+</code></pre>
+<h4 id="use-different-configuration-variables-on-staging">Use different configuration variables on staging</h4>
+<p>In most cases, you want to set different configuration parameters in your staging environment, for example your Amazon Web Services API key and secret, or your Google Analytics tracking ID. Dokku allows you to set environment variables for each app:</p>
+<pre><code class="lang-bash">dokku config:set staging GA_TRACKING_ID=&#39;UA-5xxxxxxx-1&#39;
+dokku config:set staging AWS_ACCESS_KEY_ID=&#39;xxxxxxxxxxxxxxxxxxxx&#39;
+dokku config:set staging AWS_SECRET_ACCESS_KEY=&#39;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39;
+dokku config:set staging S3_BUCKET=&#39;example-bucket&#39;
+</code></pre>
+<p>In <code>config/production.rb</code>, you can pull your configuration from the environment like this:</p>
+<pre><code class="lang-ruby">Rails.application.configure do
+  ...
+
+  # Google Analytics tracking ID
+  config.ga_tracking_id = ENV[&#39;GA_TRACKING_ID&#39;]
+end
+</code></pre>
+<p>Then you can access your configuration variables throughout your app, e.g. <code>Rails.configuration.ga_tracking_id</code>. For example, in an ERB template:</p>
+<pre><code class="lang-html">&lt;%# Google Analytics (only in production environments) %&gt;
+&lt;% if Rails.env.production? %&gt;
+  &lt;script&gt;
+    (function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);
+
+    ga(&#39;create&#39;, &#39;&lt;%= Rails.configuration.ga_tracking_id %&gt;&#39;, &#39;example.com&#39;);
+    ga(&#39;require&#39;, &#39;displayfeatures&#39;);
+    ga(&#39;require&#39;, &#39;linkid&#39;, &#39;linkid.js&#39;);
+    ga(&#39;send&#39;, &#39;pageview&#39;);
+  &lt;/script&gt;
+&lt;% end %&gt;
+</code></pre>
+<p>That&#39;s it!</p>
