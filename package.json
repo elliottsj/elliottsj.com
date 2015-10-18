@@ -1,0 +1,27 @@
+{
+  "name": "elliottsj.github.io",
+  "version": "0.0.1",
+  "description": "My personal portfolio site and blog",
+  "main": "n/a",
+  "scripts": {
+    "start": "gatsby serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elliottsj/elliottsj.github.io.git"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gatsby": "^0.6.2",
+    "react": "^0.13.3",
+    "react-document-title": "^1.0.2",
+    "react-responsive-grid": "^0.2.0",
+    "react-router": "^0.13.3",
+    "typography": "^0.3.6"
+  }
+}
