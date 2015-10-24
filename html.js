@@ -1,10 +1,13 @@
+/* global __GH_PAGES__ */
 import React from 'react'
-import Typography from 'typography'
 import DocumentTitle from 'react-document-title'
 
-const { TypographyStyle } = new Typography()
-
 export default class Html extends React.Component {
+  static propTypes = {
+    body: React.PropTypes.string,
+    config: React.PropTypes.object
+  }
+
   static defaultProps = {
     body: ''
   }
@@ -24,30 +27,13 @@ export default class Html extends React.Component {
           <meta httpEquiv='X-UA-Compatible' content='IE=edge'/>
           <meta name='viewport' content='width=device-width, initial-scale=1'/>
           <title>{title}</title>
-          <TypographyStyle/>
-          <style dangerouslySetInnerHTML={{__html:
-            `
-              body {
-                color: rgb(66,66,66);
-              }
-              h1,h2,h3,h4,h5,h6 {
-                color: rgb(44,44,44);
-              }
-              a {
-                color: rgb(42,93,173);
-                text-decoration: none;
-              }
-              a:hover {
-                text-decoration: underline;
-              }
-            `
-          }}/>
+          <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700' rel='stylesheet' type='text/css' />
+          <script defer src={`${urlPrefix}/bundle.js`}/>
         </head>
-        <body className='landing-page'>
+        <body>
           <div id='react-mount' dangerouslySetInnerHTML={{__html: body}} />
-          <script src={`${urlPrefix}/bundle.js`}/>
         </body>
       </html>
-    );
+    )
   }
 }
