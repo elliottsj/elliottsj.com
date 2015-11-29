@@ -37,10 +37,6 @@ const PROJECTS = [
   }
 ]
 
-@page({
-  title: 'Home',
-  description: 'Welcome to my blog'
-})
 export default class Projects extends Component {
   render () {
     const projectNameStyle = {
@@ -84,3 +80,8 @@ export default class Projects extends Component {
     )
   }
 }
+
+export default page({
+  title: 'Home',
+  description: 'Welcome to my blog'
+})(Projects)

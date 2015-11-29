@@ -3,10 +3,7 @@ import { connect, selectCurrentPage } from 'nucleate'
 
 const BASE_TITLE = 'Spencer'
 
-@connect(state => ({
-  title: selectCurrentPage(state).title
-}))
-export default class Base extends Component {
+class Base extends Component {
   static propTypes = {
     children: PropTypes.node,
     title: PropTypes.string
@@ -32,3 +29,11 @@ export default class Base extends Component {
     )
   }
 }
+
+function select (state) {
+  return {
+    title: selectCurrentPage(state).title
+  }
+}
+
+export default connect(select)(Base)

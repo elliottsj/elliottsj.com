@@ -1,3 +1,5 @@
+import 'babel-polyfill'
+
 import React from 'react'
 import { IntlProvider } from 'react-intl'
 import { createRenderer } from 'nucleate'

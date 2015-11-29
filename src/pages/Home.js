@@ -4,13 +4,7 @@ import { page, connect, Link } from 'nucleate'
 
 import DefaultLayout from '../layouts/Default'
 
-@page({
-  title: 'Home'
-})
-@connect(state => ({
-  posts: state.nucleate.pages.posts
-}))
-export default class Home extends Component {
+class Home extends Component {
   static propTypes = {
     posts: PropTypes.object.isRequired,
     title: PropTypes.string
@@ -52,3 +46,15 @@ export default class Home extends Component {
     )
   }
 }
+
+const HomePage = page({
+  title: 'Home'
+})(Home)
+
+function select (state) {
+  return {
+    posts: state.nucleate.pages.posts
+  }
+}
+
+export default connect(select)(HomePage)
