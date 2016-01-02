@@ -1,0 +1,29 @@
+{
+  "name": "elliottsj.github.io",
+  "version": "1.0.0",
+  "description": "My personal portfolio site and blog",
+  "main": "index.js",
+  "scripts": {
+    "build": "sitegen build ./index.js",
+    "start": "node-sass ./css/main.scss ./lib/main.css && sitegen serve ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elliottsj/elliottsj.github.io.git"
+  },
+  "author": "Spencer Elliott <me@elliottsj.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elliottsj/elliottsj.github.io/issues"
+  },
+  "homepage": "https://github.com/elliottsj/elliottsj.github.io#readme",
+  "dependencies": {
+    "history": "^1.17.0",
+    "react": "^0.14.5",
+    "react-dom": "^0.14.5",
+    "react-intl": "^2.0.0-beta-2",
+    "react-router": "^1.0.0",
+    "sitegen": "^0.13.0"
+  }
+}
