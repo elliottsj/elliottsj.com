@@ -1,11 +1,13 @@
+import 'babel/polyfill';
+
 import React from 'react'
 import { IntlProvider } from 'react-intl'
 import { Link } from 'react-router'
-import { includePages, page, Meta } from 'sitegen'
+import { Meta } from 'sitegen'
 
-import 'site/main.css'
+import 'lib/main.css'
 
-export let route = includePages('./pages/*')
+export const route = require('sitegen/internal').wrapPageContext(require.context('page!./pages'));
 
 const BASE_TITLE = 'Spencer'
 

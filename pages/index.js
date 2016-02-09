@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { FormattedDate } from 'react-intl'
 import { includePages, pages, Link, Meta } from 'sitegen'
 
-export class component extends React.Component {
+export class component extends Component {
   render() {
-    const posts = pages('./posts/*.md')
+    const posts = require('sitegen/internal').wrapPageMetaContext(require.context('page-id!./posts'));
     return (
       <div className='home'>
         <ul className='post-list'>
