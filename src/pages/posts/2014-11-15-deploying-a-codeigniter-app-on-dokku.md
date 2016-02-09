@@ -1,5 +1,5 @@
 ---
-layout: Post
+layout: lib/layouts/PostLayout
 title:  Deploying CodeIgniter on EC2 via Dokku
 date:   2014-11-21 12:00:00
 comments: true

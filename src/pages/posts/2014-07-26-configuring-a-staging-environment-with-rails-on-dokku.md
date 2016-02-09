@@ -1,5 +1,5 @@
 ---
-layout: Post
+layout: lib/layouts/PostLayout
 title:  Configuring a Staging Environment with Rails on Dokku
 date:   2014-07-26 12:00:00
 ---

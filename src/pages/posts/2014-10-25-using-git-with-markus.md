@@ -1,5 +1,5 @@
 ---
-layout: Post
+layout: lib/layouts/PostLayout
 title:  Using Git with MarkUs
 date:   2014-10-25 12:00:00
 comments: true

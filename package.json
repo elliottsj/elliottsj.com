@@ -4,9 +4,11 @@
   "description": "My personal portfolio site and blog",
   "main": "index.js",
   "scripts": {
-    "build": "sitegen build ./index.js",
-    "start": "node-sass ./css/main.scss ./lib/main.css && sitegen serve ./index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "nucleate build src",
+    "lint": "eslint --ext .js,.jsx src",
+    "publish": "npm run build && gh-pages --dist build --branch master",
+    "start": "nucleate serve src",
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -19,11 +21,24 @@
   },
   "homepage": "https://github.com/elliottsj/elliottsj.github.io#readme",
   "dependencies": {
-    "history": "^1.17.0",
-    "react": "^0.14.5",
-    "react-dom": "^0.14.5",
+    "babel-eslint": "^6.1.2",
+    "classnames": "^2.2.5",
+    "common-tags": "^1.3.1",
+    "eslint": "^3.4.0",
+    "eslint-config-airbnb": "^10.0.1",
+    "eslint-plugin-import": "^1.14.0",
+    "eslint-plugin-jsx-a11y": "^2.2.0",
+    "eslint-plugin-react": "^6.2.0",
+    "file-loader": "^0.9.0",
+    "gh-pages": "^0.11.0",
+    "highlight.js": "^9.6.0",
+    "lodash": "^4.15.0",
+    "material-ui": "^0.15.4",
+    "normalize.css": "^4.2.0",
+    "nucleate": "0.1.0-alpha.10",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
     "react-intl": "^2.0.0-beta-2",
-    "react-router": "^1.0.0",
-    "sitegen": "^0.13.0"
+    "react-tap-event-plugin": "^1.0.0"
   }
 }
