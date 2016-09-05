@@ -8,7 +8,6 @@ import {
 
 import BaseLayout from 'lib/layouts/BaseLayout';
 
-import 'file?name=CNAME!./CNAME';
 import 'lib/css/main.scss';
 
 export const getIndexRoute = includeRoute(require('route!./pages/'));
