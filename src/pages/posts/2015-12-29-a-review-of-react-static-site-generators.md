@@ -2,6 +2,7 @@
 layout: lib/layouts/PostLayout
 title: A Comparison of React-Based Static Site Generators
 date: 2015-12-29 12:00:00
+draft: true
 ---
 
 ### Why?

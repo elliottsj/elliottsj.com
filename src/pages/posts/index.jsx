@@ -11,6 +11,7 @@ import { FormattedDate } from 'react-intl';
 
 const filterPosts = pipe(
   filter(post => post.fullPath !== '/posts'),
+  filter(post => !post.meta.draft),
   sortBy(post => new Date(post.meta.date)),
 );
 
