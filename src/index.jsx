@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { IntlProvider } from 'react-intl';
 import {
   assets,
@@ -37,5 +37,10 @@ function Index({ children, routes }) {
     </html>
   );
 }
+
+Index.propTypes = {
+  children: PropTypes.node,
+  routes: PropTypes.array.isRequired,
+};
 
 export const component = Index;

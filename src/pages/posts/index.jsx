@@ -6,7 +6,7 @@ import {
   query,
   withQuery,
 } from 'nucleate';
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { FormattedDate } from 'react-intl';
 
 const filterPosts = pipe(
@@ -41,7 +41,10 @@ function PostsIndex({ posts }) {
   );
 }
 
+PostsIndex.propTypes = {
+  posts: PropTypes.array.isRequired,
+};
+
 export const component = withQuery({
   posts: query('/posts'),
 })(PostsIndex);
-

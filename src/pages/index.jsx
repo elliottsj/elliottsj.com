@@ -1,1 +1,1 @@
-export { component } from './posts/';
+export * from './posts/';

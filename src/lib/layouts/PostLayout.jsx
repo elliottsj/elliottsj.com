@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { FormattedDate } from 'react-intl';
 
 function PostLayout({ children, date, title }) {
@@ -23,5 +23,11 @@ function PostLayout({ children, date, title }) {
     </div>
   );
 }
+
+PostLayout.propTypes = {
+  children: PropTypes.node,
+  date: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};
 
 export default PostLayout;
