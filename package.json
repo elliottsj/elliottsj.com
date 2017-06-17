@@ -7,7 +7,7 @@
     "build": "next build",
     "dev": "next",
     "lint": "eslint .",
-    "start": "next start"
+    "start": "npm run build && next start"
   },
   "repository": {
     "type": "git",
