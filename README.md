@@ -1,4 +1,3 @@
-elliottsj.github.io
-===================
+# elliottsj.com
 
 My personal portfolio site and blog

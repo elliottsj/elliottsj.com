@@ -1,5 +1,5 @@
 {
-  "name": "elliottsj.github.io",
+  "name": "elliottsj.com",
   "version": "1.0.0",
   "description": "My personal portfolio site and blog",
   "main": "index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elliottsj/elliottsj.github.io.git"
+    "url": "git+https://github.com/elliottsj/elliottsj.com.git"
   },
   "author": "Spencer Elliott <me@elliottsj.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/elliottsj/elliottsj.github.io/issues"
+    "url": "https://github.com/elliottsj/elliottsj.com/issues"
   },
-  "homepage": "https://github.com/elliottsj/elliottsj.github.io#readme",
+  "homepage": "https://github.com/elliottsj/elliottsj.com#readme",
   "dependencies": {
     "babel-plugin-inline-import": "^2.0.5",
     "babel-plugin-module-resolver": "^2.7.1",
