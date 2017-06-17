@@ -1,0 +1,15 @@
+{
+  "name": "elliottsj.com",
+  "scripts": {},
+  "env": {},
+  "formation": {},
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/superfly/fly-heroku-buildpack"
+    }
+  ]
+}
