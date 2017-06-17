@@ -3,8 +3,8 @@ module.exports = {
     return Object.assign({}, config, {
       node: {
         __dirname: true,
-        __filename: true
-      }
+        __filename: true,
+      },
     });
-  }
+  },
 };
