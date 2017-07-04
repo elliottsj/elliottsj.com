@@ -1,4 +1,5 @@
 {
+  "extends": "eslint:recommended",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -11,7 +12,8 @@
     "jest": true
   },
   "plugins": [
-    "prettier"
+    "prettier",
+    "react"
   ],
   "rules": {
     "prettier/prettier": [
@@ -19,6 +21,8 @@
         "trailingComma": "all",
         "singleQuote": true
       }
-    ]
+    ],
+    "react/jsx-no-undef": "error",
+    "react/jsx-uses-vars": "error"
   }
 }

@@ -4,8 +4,12 @@ function Component() {
   return <div>test</div>;
 }
 
+const date = '2016-05-04';
+const title = 'Test Post';
+
 const { href, component } = post({
   filename: __filename,
   component: Component,
 });
-export { href, component as default };
+
+export { component as default, date, href, title };

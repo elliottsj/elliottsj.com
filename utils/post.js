@@ -20,10 +20,9 @@ export default function post({
 }) {
   return {
     href: `/posts/${name}`,
-    component: () => (
+    component: () =>
       <PostLayout>
         {markdownSource ? <Markdown source={markdownSource} /> : Component}
-      </PostLayout>
-    ),
+      </PostLayout>,
   };
 }

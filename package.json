@@ -6,6 +6,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next",
+    "format": "prettier --single-quote --trailing-comma all --write ./{components,pages,utils}/{*,**/*}.js",
     "lint": "eslint .",
     "postinstall": "npm run build",
     "start": "next start"
@@ -23,13 +24,15 @@
   "dependencies": {
     "babel-plugin-inline-import": "^2.0.5",
     "babel-plugin-module-resolver": "^2.7.1",
-    "eslint": "^3.19.0",
+    "eslint": "^4.1.1",
     "eslint-plugin-prettier": "^2.1.2",
+    "eslint-plugin-react": "^7.1.0",
     "moment": "^2.18.1",
     "next": "^2.4.4",
-    "prettier": "^1.4.4",
+    "prettier": "^1.5.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-intl": "^2.3.0",
     "react-markdown": "^2.5.0"
   }
 }

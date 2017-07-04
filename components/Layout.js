@@ -1,8 +1,9 @@
 import Head from 'next/head';
+import { IntlProvider } from 'react-intl';
 
 import Wrapper from './Wrapper';
 
-const SiteTitle = () => (
+const SiteTitle = () =>
   <a className="site-title" href="/">
     <style jsx>{`
       a {
@@ -13,15 +14,15 @@ const SiteTitle = () => (
         margin-bottom: 0;
         float: left;
       }
-      a, a:visited {
+      a,
+      a:visited {
         color: #424242;
       }
     `}</style>
     Your awesome title
-  </a>
-);
+  </a>;
 
-const SiteNav = () => (
+const SiteNav = () =>
   <nav className="site-nav">
     <style jsx>{`
       nav {
@@ -49,44 +50,45 @@ const SiteNav = () => (
           background-color: #fdfdfd;
           border: 1px solid #e8e8e8;
           border-radius: 5px;
-          text-align: right; }
-          nav label[for="nav-trigger"] {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 36px;
-            z-index: 2;
-            cursor: pointer;
-          }
-          nav .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-          }
-          nav .menu-icon > svg path {
-            fill: #424242;
-          }
-          nav input ~ .trigger {
-            clear: both;
-            display: none;
-          }
-          nav input:checked ~ .trigger {
-            display: block;
-            padding-bottom: 5px;
-          }
-          nav .page-link {
-            display: block;
-            padding: 5px 10px;
-            margin-left: 20px;
-          }
-          nav .page-link:not(:last-child) {
-            margin-right: 0;
-          }
+          text-align: right;
         }
+        nav label[for="nav-trigger"] {
+          display: block;
+          float: right;
+          width: 36px;
+          height: 36px;
+          z-index: 2;
+          cursor: pointer;
+        }
+        nav .menu-icon {
+          display: block;
+          float: right;
+          width: 36px;
+          height: 26px;
+          line-height: 0;
+          padding-top: 10px;
+          text-align: center;
+        }
+        nav .menu-icon > svg path {
+          fill: #424242;
+        }
+        nav input ~ .trigger {
+          clear: both;
+          display: none;
+        }
+        nav input:checked ~ .trigger {
+          display: block;
+          padding-bottom: 5px;
+        }
+        nav .page-link {
+          display: block;
+          padding: 5px 10px;
+          margin-left: 20px;
+        }
+        nav .page-link:not(:last-child) {
+          margin-right: 0;
+        }
+      }
     `}</style>
     <input type="checkbox" id="nav-trigger" className="nav-trigger" />
     <label htmlFor="nav-trigger">
@@ -108,12 +110,13 @@ const SiteNav = () => (
       </span>
     </label>
     <div className="trigger">
-      <a className="page-link" href="/about/">About</a>
+      <a className="page-link" href="/about/">
+        About
+      </a>
     </div>
-  </nav>
-);
+  </nav>;
 
-const Header = ({ children }) => (
+const Header = () =>
   <header role="banner">
     <style jsx>{`
       header {
@@ -127,10 +130,9 @@ const Header = ({ children }) => (
       <SiteTitle />
       <SiteNav />
     </Wrapper>
-  </header>
-);
+  </header>;
 
-const Footer = () => (
+const Footer = () =>
   <footer className="site-footer">
     <style jsx>{`
       footer {
@@ -186,10 +188,8 @@ const Footer = () => (
           width: calc(100% - (30px / 2));
         }
       }
-
-      /**
-       * Icons
-       */
+      /* *
+       * Icons */
       .icon > svg {
         display: inline-block;
         vertical-align: middle;
@@ -197,7 +197,6 @@ const Footer = () => (
       .icon > svg path {
         fill: #828282;
       }
-
       .social-media-list .icon {
         padding-right: 5px;
       }
@@ -248,141 +247,173 @@ const Footer = () => (
         </div>
         <div className="footer-col footer-col-3">
           <p>
-            Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+            Write an awesome description for your new site here. You can edit
+            this line in _config.yml. It will appear in your document head meta
+            (for Google search results) and in your feed.xml site description.
           </p>
         </div>
       </div>
     </Wrapper>
-  </footer>
-);
+  </footer>;
 
-const Layout = ({ children }) => (
-  <div>
-    <Head>
-      <title>Spencer Elliott</title>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    <style jsx global>{`
-      /**
-       * Reset some basic elements
-       */
-      body, h1, h2, h3, h4, h5, h6,
-      p, blockquote, pre, hr,
-      dl, dd, ol, ul, figure {
-        margin: 0;
-        padding: 0; }
-
-      /**
-       * Basic styling
-       */
-      body {
-        font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-        color: #111;
-        background-color: #fdfdfd;
-        -webkit-text-size-adjust: 100%;
-        -webkit-font-feature-settings: "kern" 1;
-        -moz-font-feature-settings: "kern" 1;
-        -o-font-feature-settings: "kern" 1;
-        font-feature-settings: "kern" 1;
-        font-kerning: normal; }
-
-      /**
-       * Set 'margin-bottom' to maintain vertical rhythm
-       */
-      h1, h2, h3, h4, h5, h6,
-      p, blockquote, pre,
-      ul, ol, dl, figure,
-      .highlight {
-        margin-bottom: 15px; }
-
-      /**
-       * Images
-       */
-      img {
-        max-width: 100%;
-        vertical-align: middle; }
-
-      /**
-       * Figures
-       */
-      figure > img {
-        display: block; }
-
-      figcaption {
-        font-size: 14px; }
-
-      /**
-       * Lists
-       */
-      ul, ol {
-        margin-left: 30px; }
-
-      li > ul,
-      li > ol {
-        margin-bottom: 0; }
-
-      /**
-       * Headings
-       */
-      h1, h2, h3, h4, h5, h6 {
-        font-weight: 400; }
-
-      /**
-       * Links
-       */
-      a {
-        color: #2a7ae2;
-        text-decoration: none; }
+const Layout = ({ children }) =>
+  <IntlProvider locale="en">
+    <div>
+      <Head>
+        <title>Spencer Elliott</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <style jsx global>{`
+        /**
+         * Reset some basic elements
+         */
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        hr,
+        dl,
+        dd,
+        ol,
+        ul,
+        figure {
+          margin: 0;
+          padding: 0;
+        } /**
+         * Basic styling
+         */
+        body {
+          font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+          color: #111;
+          background-color: #fdfdfd;
+          -webkit-text-size-adjust: 100%;
+          -webkit-font-feature-settings: "kern" 1;
+          -moz-font-feature-settings: "kern" 1;
+          -o-font-feature-settings: "kern" 1;
+          font-feature-settings: "kern" 1;
+          font-kerning: normal;
+        } /**
+         * Set 'margin-bottom' to maintain vertical rhythm
+         */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        ul,
+        ol,
+        dl,
+        figure,
+        .highlight {
+          margin-bottom: 15px;
+        } /**
+         * Images
+         */
+        img {
+          max-width: 100%;
+          vertical-align: middle;
+        } /**
+         * Figures
+         */
+        figure > img {
+          display: block;
+        }
+        figcaption {
+          font-size: 14px;
+        } /**
+         * Lists
+         */
+        ul,
+        ol {
+          margin-left: 30px;
+        }
+        li > ul,
+        li > ol {
+          margin-bottom: 0;
+        }
+        /**
+         * Headings
+         */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-weight: 400;
+        }
+        /**
+         * Links
+         */
+        a {
+          color: #2a7ae2;
+          text-decoration: none;
+        }
         a:visited {
-          color: #1756a9; }
+          color: #1756a9;
+        }
         a:hover {
           color: #111;
-          text-decoration: underline; }
+          text-decoration: underline;
+        }
         .social-media-list a:hover {
-          text-decoration: none; }
-          .social-media-list a:hover .username {
-            text-decoration: underline; }
-
-      /**
-       * Blockquotes
-       */
-      blockquote {
-        color: #828282;
-        border-left: 4px solid #e8e8e8;
-        padding-left: 15px;
-        font-size: 18px;
-        letter-spacing: -1px;
-        font-style: italic; }
+          text-decoration: none;
+        }
+        .social-media-list a:hover .username {
+          text-decoration: underline;
+        }
+        /**
+         * Blockquotes
+         */
+        blockquote {
+          color: #828282;
+          border-left: 4px solid #e8e8e8;
+          padding-left: 15px;
+          font-size: 18px;
+          letter-spacing: -1px;
+          font-style: italic;
+        }
         blockquote > :last-child {
-          margin-bottom: 0; }
-
-      /**
-       * Code formatting
-       */
-      pre,
-      code {
-        font-size: 15px;
-        border: 1px solid #e8e8e8;
-        border-radius: 3px;
-        background-color: #eef; }
-
-      code {
-        padding: 1px 5px; }
-
-      pre {
-        padding: 8px 12px;
-        overflow-x: auto; }
+          margin-bottom: 0;
+        } /**
+         * Code formatting
+         */
+        pre,
+        code {
+          font-size: 15px;
+          border: 1px solid #e8e8e8;
+          border-radius: 3px;
+          background-color: #eef;
+        }
+        code {
+          padding: 1px 5px;
+        }
+        pre {
+          padding: 8px 12px;
+          overflow-x: auto;
+        }
         pre > code {
           border: 0;
           padding-right: 0;
-          padding-left: 0; }
-    `}</style>
-    <Header />
-    <Wrapper>
-      {children}
-    </Wrapper>
-    <Footer />
-  </div>
-);
+          padding-left: 0;
+        }
+      `}</style>
+      <Header />
+      <Wrapper>
+        {children}
+      </Wrapper>
+      <Footer />
+    </div>
+  </IntlProvider>;
 
 export default Layout;
