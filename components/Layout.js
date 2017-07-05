@@ -147,11 +147,6 @@ const SiteNav = () =>
         </svg>
       </span>
     </label>
-    <div className="trigger">
-      <a className="page-link" href="/about/">
-        About
-      </a>
-    </div>
   </nav>;
 
 const Header = () =>
@@ -281,6 +276,12 @@ const Footer = () =>
               </a>
             </li>
           </ul>
+        </div>
+        <div className="footer-col footer-col-3">
+          <p>
+            ✏️ Developer @ Microsoft.<br />
+            💜 JavaScript, webpack, React, Python, Docker.
+          </p>
         </div>
       </div>
     </Wrapper>
