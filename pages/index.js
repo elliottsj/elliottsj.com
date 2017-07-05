@@ -7,6 +7,7 @@ import * as post20140109 from './posts/2014-01-09-public-key-authentication-on-c
 import * as post20140726 from './posts/2014-07-26-configuring-a-staging-environment-with-rails-on-dokku';
 import * as post20140927 from './posts/2014-09-27-csc309-deploying-the-right-way';
 import * as post20141025 from './posts/2014-10-25-using-git-with-markus';
+import * as post20141115 from './posts/2014-11-15-deploying-a-codeigniter-app-on-dokku';
 
 function PostLinks({ children }) {
   return (
@@ -60,6 +61,7 @@ export default () =>
       }
     `}</style>
     <PostLinks>
+      <PostLink post={post20141115} />
       <PostLink post={post20141025} />
       <PostLink post={post20140927} />
       <PostLink post={post20140726} />
