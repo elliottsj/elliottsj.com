@@ -1,5 +1,5 @@
 module.exports = {
-  webpack: (config, { dev }) => {
+  webpack: config => {
     return Object.assign({}, config, {
       node: {
         __dirname: true,
