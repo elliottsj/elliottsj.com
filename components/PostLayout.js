@@ -1,4 +1,4 @@
-import moment from 'moment';
+import { FormattedDate } from 'react-intl';
 
 import Layout from './Layout';
 
@@ -6,6 +6,14 @@ const PostLayout = ({ children, date, title }) =>
   <Layout>
     <article itemScope itemType="http://schema.org/BlogPosting">
       <style jsx>{`
+        .post-meta {
+          font-size: 14px;
+          color: #828282;
+        }
+        .post-link {
+          display: block;
+          font-size: 24px;
+        }
         .post-header {
           margin-bottom: 30px;
         }
@@ -52,9 +60,12 @@ const PostLayout = ({ children, date, title }) =>
           {title}
         </h1>
         <p className="post-meta">
-          <time dateTime={moment(date).format()} itemProp="datePublished">
-            {moment(date).format('D MMMM, YYYY')}
-          </time>
+          <FormattedDate
+            value={date}
+            year="numeric"
+            month="long"
+            day="numeric"
+          />
         </p>
       </header>
       <div className="post-content" itemProp="articleBody">

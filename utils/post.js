@@ -13,16 +13,20 @@ function nameFromFilename(filename) {
 }
 
 export default function post({
+  date,
   filename,
   name = nameFromFilename(filename),
   markdownSource,
+  title,
   Component,
 }) {
   return {
-    href: `/posts/${name}`,
     component: () =>
-      <PostLayout>
+      <PostLayout date={date} title={title}>
         {markdownSource ? <Markdown source={markdownSource} /> : Component}
       </PostLayout>,
+    date,
+    href: `/posts/${name}`,
+    title,
   };
 }

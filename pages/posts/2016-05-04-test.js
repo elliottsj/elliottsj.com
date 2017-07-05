@@ -4,12 +4,11 @@ function Component() {
   return <div>test</div>;
 }
 
-const date = '2016-05-04';
-const title = 'Test Post';
-
-const { href, component } = post({
-  filename: __filename,
+const { date, component, href, title } = post({
   component: Component,
+  date: '2016-05-04',
+  filename: __filename,
+  title: 'Test Post',
 });
 
 export { component as default, date, href, title };

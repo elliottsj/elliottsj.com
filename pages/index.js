@@ -50,27 +50,15 @@ function PostLink({ post: { date, href, title } }) {
   );
 }
 
-function Main() {
-  return (
-    <main aria-label="Content">
-      <style jsx>{`
-        main {
-          padding: 30px 0;
-        }
-        h1 {
-          font-size: 20px;
-        }
-      `}</style>
-      <h1>Posts</h1>
-      <PostLinks>
-        <PostLink post={post20140109} />
-        <PostLink post={post20160504} />
-      </PostLinks>
-    </main>
-  );
-}
-
 export default () =>
   <Layout>
-    <Main />
+    <style jsx>{`
+      h1 {
+        font-size: 20px;
+      }
+    `}</style>
+    <PostLinks>
+      <PostLink post={post20140109} />
+      <PostLink post={post20160504} />
+    </PostLinks>
   </Layout>;

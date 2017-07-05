@@ -1,7 +1,45 @@
 import Head from 'next/head';
 import { IntlProvider } from 'react-intl';
 
-import Wrapper from './Wrapper';
+const Wrapper = ({ children }) =>
+  <div className="wrapper">
+    <style jsx>{`
+      div {
+        max-width: -webkit-calc(800px - (30px * 2));
+        max-width: calc(800px - (30px * 2));
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 30px;
+        padding-left: 30px;
+      }
+      @media screen and (max-width: 800px) {
+        div {
+          max-width: -webkit-calc(800px - (30px));
+          max-width: calc(800px - (30px));
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+      }
+      div:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    `}</style>
+    {children}
+  </div>;
+
+const Content = ({ children }) =>
+  <main aria-label="Content">
+    <style jsx>{`
+      main {
+        padding: 30px 0;
+      }
+    `}</style>
+    <Wrapper>
+      {children}
+    </Wrapper>
+  </main>;
 
 const SiteTitle = () =>
   <a className="site-title" href="/">
@@ -19,7 +57,7 @@ const SiteTitle = () =>
         color: #424242;
       }
     `}</style>
-    Your awesome title
+    Spencer Elliott
   </a>;
 
 const SiteNav = () =>
@@ -205,20 +243,19 @@ const Footer = () =>
       }
     `}</style>
     <Wrapper>
-      <h2>Your awesome title</h2>
       <div className="footer-col-wrapper">
         <div className="footer-col footer-col-1">
           <ul className="contact-list">
-            <li>Your awesome title</li>
+            <li>Spencer Elliott</li>
             <li>
-              <a href="mailto:your-email@domain.com">your-email@domain.com</a>
+              <a href="mailto:me@elliottsj.com">me@elliottsj.com</a>
             </li>
           </ul>
         </div>
         <div className="footer-col footer-col-2">
           <ul className="social-media-list">
             <li>
-              <a href="https://github.com/jekyll">
+              <a href="https://github.com/elliottsj">
                 <span className="icon icon--github">
                   <svg viewBox="0 0 16 16" width="16px" height="16px">
                     <path
@@ -227,11 +264,11 @@ const Footer = () =>
                     />
                   </svg>
                 </span>
-                <span className="username">jekyll</span>
+                <span className="username">elliottsj</span>
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/jekyllrb">
+              <a href="https://twitter.com/spe_">
                 <span className="icon icon--twitter">
                   <svg viewBox="0 0 16 16" width="16px" height="16px">
                     <path
@@ -240,17 +277,10 @@ const Footer = () =>
                     />
                   </svg>
                 </span>
-                <span className="username">jekyllrb</span>
+                <span className="username">spe_</span>
               </a>
             </li>
           </ul>
-        </div>
-        <div className="footer-col footer-col-3">
-          <p>
-            Write an awesome description for your new site here. You can edit
-            this line in _config.yml. It will appear in your document head meta
-            (for Google search results) and in your feed.xml site description.
-          </p>
         </div>
       </div>
     </Wrapper>
@@ -409,9 +439,9 @@ const Layout = ({ children }) =>
         }
       `}</style>
       <Header />
-      <Wrapper>
+      <Content>
         {children}
-      </Wrapper>
+      </Content>
       <Footer />
     </div>
   </IntlProvider>;
