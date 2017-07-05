@@ -1,5 +1,3 @@
-# Public Key Authentication on CDF
-
 You don't have to use your [CDF](http://www.cdf.toronto.edu/) password every time they connect via SSH. Instead of password authentication, you can use an SSH key pair to authenticate automatically.
 
 ### OS X / *nix using OpenSSH
