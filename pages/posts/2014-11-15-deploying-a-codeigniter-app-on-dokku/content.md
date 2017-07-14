@@ -1,4 +1,4 @@
-[Using the Git post-receive hook to deploy your static site](./2014-09-27-csc309-deploying-the-right-way.md)
+[Using the Git post-receive hook to deploy your static site](/posts/2014-09-27-csc309-deploying-the-right-way)
 is lightweight and convenient, but doesn't quite work for applications that require backing services like
 a database or a file upload service.
 
