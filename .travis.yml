@@ -6,7 +6,6 @@ language: node_js
 node_js:
   - '6'
   - 'stable'
-cache: yarn
 
 # Make Greenkeeper work with lockfiles:
 # https://github.com/greenkeeperio/greenkeeper-lockfile/tree/f62f2f3e33cd1dd349c2898e0129c693cbc5804d#yarn
