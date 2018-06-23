@@ -26,7 +26,7 @@
     "babel-inline-import-loader": "0.0.5",
     "babel-plugin-inline-import": "git+https://github.com/elliottsj/babel-plugin-inline-import.git#leading-comment-path",
     "babel-plugin-module-resolver": "^2.7.1",
-    "eslint": "^4.1.1",
+    "eslint": "^5.0.0",
     "eslint-plugin-prettier": "^2.1.2",
     "eslint-plugin-react": "^7.1.0",
     "moment": "^2.18.1",
